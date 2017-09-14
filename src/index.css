@@ -1,5 +1,9 @@
 body {
-  background-color: #1565C0;
+  background-image: url('assets/images/background.png');
+  background-repeat: no-repeat;
+  background-position: relative;
+  background-size: cover;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
