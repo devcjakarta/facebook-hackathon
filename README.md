@@ -1,2 +1,2 @@
-# facebook-hackaton
-Facebook Hackaton Project
+# facebook-hackathon
+Facebook Hackathon Project
