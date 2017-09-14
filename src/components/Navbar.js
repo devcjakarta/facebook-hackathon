@@ -23,7 +23,7 @@ const styles = {
   },
   h1: {
     color: '#FFF',
-    fontSize: 25
+    fontSize: 23
   }
 }
 
