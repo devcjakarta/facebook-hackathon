@@ -4,7 +4,7 @@ import { Grid, Card, Form } from 'semantic-ui-react'
 class FormRegister extends Component {
   render() {
     return (
-      <Grid.Column style={styles.column}>
+      <Grid.Column mobile={16} tablet={16} computer={8} style={styles}>
         <Card fluid>
           <Card.Content>
             <Form>

@@ -1,35 +1,23 @@
 import React, { Component } from 'react'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
+
+import '../styles/register/label-register.css'
 
 class LabelRegister extends Component {
   render() {
+    let { title, subTitle } = this.props
     return (
-      <Grid.Column style={styles.Column}>
-        <h1 style={styles.h1}>
-          {this.props.title}
-        </h1>
-        <h2 style={styles.h2}>
-          {this.props.subTitle}
-        </h2>
+      <Grid.Column mobile={16} tablet={16} computer={8}>
+        <div className="label-register">
+          <Header as="h1">
+            {title}
+          </Header>
+          <Header as="h2">
+            {subTitle}
+          </Header>
+        </div>
       </Grid.Column>
     )
-  }
-}
-
-const styles = {
-  h1: {
-    color: '#FFF',
-    fontSize: 80
-  },
-  h2: {
-    color: '#EEE',
-    fontSize: 30
-  },
-  column: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
   }
 }
 

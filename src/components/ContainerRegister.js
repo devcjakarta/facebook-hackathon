@@ -5,10 +5,10 @@ class ContainerRegister extends Component {
   render() {
     return (
       <Container>
-        <Grid columns="equal">
-          {this.props.children}  
-        </Grid> 
-      </Container> 
+        <Grid>
+          {this.props.children}
+        </Grid>
+      </Container>
     )
   }
 }
