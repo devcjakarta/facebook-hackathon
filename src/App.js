@@ -13,7 +13,17 @@ class App extends Component {
       firstName: '',
       lastName: ''
     }
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
+
+  handleInputChange ({target}) {
+    let {name, value} = target
+    console.log(name, value)
+    this.setState({
+      [name]: value
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -29,17 +39,17 @@ class App extends Component {
             <FormRegister>
               <Form.Field>
                <label>First Name</label>
-               <input onChange={(e) => {this.setState({firstName: e.target.value})}} value={this.state.firstName} placeholder='First Name' />
+               <input type="text" name="firstName" onChange={this.handleInputChange} value={this.state.firstName} placeholder='First Name' />
               </Form.Field>
               <Form.Field>
                 <label>Last Name</label>
-                <input onChange={(e) => {this.setState({lastName: e.target.value})}} value={this.state.lastName} placeholder='Last Name' />
+                <input type="text" name="lastName" onChange={this.handleInputChange} value={this.state.lastName} placeholder='Last Name' />
               </Form.Field>
               <Form.Field>
                 <Button positive fluid onClick={() => alert(`Name : ${this.state.firstName} ${this.state.lastName}`)}>Register</Button>
               </Form.Field>
             </FormRegister>
-          </ContainerRegister> 
+          </ContainerRegister>
         </div>
       </div>
     )
