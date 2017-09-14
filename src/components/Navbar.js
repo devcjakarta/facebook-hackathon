@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Container, Menu } from 'semantic-ui-react'
 
 class Navbar extends Component {
   render() {
     return (
       <Menu secondary style={styles.navbar}>
-        <Menu.Item>
-          <h1 style={styles.h1}>{this.props.title}</h1>
-        </Menu.Item>
+        <Container>
+          <Menu.Item>
+            <h1 style={styles.h1}>{this.props.title}</h1>
+          </Menu.Item>
+        </Container> 
       </Menu>
     )
   }
