@@ -36,7 +36,8 @@ class App extends Component {
                 <input onChange={(e) => {this.setState({lastName: e.target.value})}} value={this.state.lastName} placeholder='Last Name' />
               </Form.Field>
               <Form.Field>
-                <Button positive fluid onClick={() => alert(`Name : ${this.state.firstName} ${this.state.lastName}`)}>Register</Button>
+                <Button positive onClick={() => alert(`Name : ${this.state.firstName} ${this.state.lastName}`)}>Register</Button>
+                <Button color='facebook' onClick={() => alert(`Name : ${this.state.firstName} ${this.state.lastName}`)}>Register with Facebook</Button>
               </Form.Field>
             </FormRegister>
           </ContainerRegister> 
