@@ -5,7 +5,7 @@ class FormRegister extends Component {
   render() {
     return (
       <Grid.Column style={styles.column}>
-        <Card>
+        <Card fluid>
           <Card.Content>
             <Form>
               {this.props.children}
