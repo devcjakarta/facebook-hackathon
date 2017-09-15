@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Container, Grid } from 'semantic-ui-react'
 
 class ContainerRegister extends Component {
@@ -11,6 +12,10 @@ class ContainerRegister extends Component {
       </Container>
     )
   }
+}
+
+ContainerRegister.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default ContainerRegister

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Grid, Header } from 'semantic-ui-react'
 
 import '../styles/register/label-register.css'
@@ -19,6 +20,11 @@ class LabelRegister extends Component {
       </Grid.Column>
     )
   }
+}
+
+LabelRegister.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired
 }
 
 export default LabelRegister

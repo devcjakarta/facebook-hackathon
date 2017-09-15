@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Menu, Container, Header } from 'semantic-ui-react'
 
 class Navbar extends Component {
@@ -18,6 +19,10 @@ class Navbar extends Component {
     )
   }
 }
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 const styles = {
   navbar: {

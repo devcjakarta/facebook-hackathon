@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Grid, Card, Form } from 'semantic-ui-react'
 
 class FormRegister extends Component {
@@ -15,6 +16,10 @@ class FormRegister extends Component {
       </Grid.Column>
     )
   }
+}
+
+FormRegister.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 const styles = {
