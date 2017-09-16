@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Button, Radio } from 'semantic-ui-react'
+import validator from 'validator'
 import Navbar from './components/Navbar'
 import ContainerRegister from './components/ContainerRegister'
 import LabelRegister from './components/LabelRegister'
@@ -18,6 +19,7 @@ class App extends Component {
       tech: ''
     }
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleValidation = this.handleValidation.bind(this)
   }
 
   handleInputChange ({target}) {
@@ -26,6 +28,26 @@ class App extends Component {
     this.setState({
       [name]: value
     })
+  }
+
+  handleValidation() {
+    const { fullName, email, phone, hackTitle, tech } = this.state
+
+    if(validator.isEmpty(fullName)) {
+      alert("Name is empty")
+    } else if(validator.isEmpty(email)) {
+      alert("Email is empty")
+    } else if(!validator.isEmail(email)) {
+      alert("Error email")
+    } else if(validator.isEmpty(phone)) {
+      alert("Phone is empty")
+    } else if(!validator.isMobilePhone(phone, 'id-ID')) {
+      alert("Error mobile phone")
+    } else if(validator.isEmpty(hackTitle)) {
+      alert("Title is empty")
+    } else if(validator.isEmpty(tech)) {
+      alert("Tech is empty")
+    }
   }
 
   render() {
@@ -94,12 +116,7 @@ class App extends Component {
                 />
               </Form.Field>
               <Form.Field>
-                <Button positive onClick={() => alert(`
-                  Name : ${this.state.fullName}\n
-                  E-mail: ${this.state.email}\n
-                  No. Telp: ${this.state.phone}\n
-                  Title: ${this.state.hackTitle}\n
-                  Tech: ${this.state.tech}`)}>Register</Button>
+                <Button positive onClick={this.handleValidation}>Register</Button>
                 <Button color="facebook" onClick={() => alert(`
                   Name : ${this.state.fullName}\n
                   E-mail: ${this.state.email}\n
