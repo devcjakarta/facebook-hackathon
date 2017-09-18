@@ -6,6 +6,7 @@ import ContainerRegister from './components/ContainerRegister'
 import LabelRegister from './components/LabelRegister'
 import FormRegister from './components/FormRegister'
 import FormField from './components/FormField'
+import ButtonSocial from './components/buttons/ButtonSocial'
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,8 @@ class App extends Component {
     }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleValidation = this.handleValidation.bind(this)
+    this.registerFacebookSuccess = this.registerFacebookSuccess.bind(this)
+    this.registerFacebookFailure = this.registerFacebookFailure.bind(this)
   }
 
   handleInputChange({target}) {
@@ -30,7 +33,7 @@ class App extends Component {
 
   handleRadioChange = (e, {value}) => {
     this.setState({value})
-  } 
+  }
 
   handleValidation() {
     const { fullName, email, phone, hackTitle, value } = this.state
@@ -50,6 +53,14 @@ class App extends Component {
     } else if(value === undefined) {
       alert("Tech is empty")
     }
+  }
+
+  registerFacebookSuccess (response) {
+    console.log(response)
+  }
+
+  registerFacebookFailure (error) {
+    console.log(error)
   }
 
   render() {
@@ -72,7 +83,7 @@ class App extends Component {
                 onChange={this.handleInputChange}
                 value={this.state.fullName}
                 placeholder="Masukan nama lengkap" />
-              
+
               <FormField
                 label="E-mail"
                 type="email"
@@ -119,12 +130,18 @@ class App extends Component {
               </Form.Field>
               <Form.Field>
                 <Button positive onClick={this.handleValidation}>Register</Button>
-                <Button color="facebook" onClick={() => alert(`
+                <ButtonSocial
+                  provider="facebook"
+                  appId="787169631462897"
+                  onLoginSuccess={this.registerFacebookSuccess}
+                  onLoginFailure={this.registerFacebookFailure}
+                  >Register with Facebook</ButtonSocial>
+                {/* <Button color="facebook" onClick={() => alert(`
                   Name : ${this.state.fullName}\n
                   E-mail: ${this.state.email}\n
                   No. Telp: ${this.state.phone}\n
                   Title: ${this.state.hackTitle}\n
-                  Tech: ${this.state.value}`)}>Register with Facebook</Button>
+                  Tech: ${this.state.value}`)}>Register with Facebook</Button> */}
               </Form.Field>
             </FormRegister>
           </ContainerRegister>
