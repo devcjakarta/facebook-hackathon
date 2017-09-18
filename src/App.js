@@ -16,22 +16,24 @@ class App extends Component {
       email: '',
       phone: '',
       hackTitle: '',
-      tech: ''
     }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleValidation = this.handleValidation.bind(this)
   }
 
-  handleInputChange ({target}) {
+  handleInputChange({target}) {
     let {name, value} = target
-    console.log(name, value)
     this.setState({
       [name]: value
     })
   }
 
+  handleRadioChange = (e, {value}) => {
+    this.setState({value})
+  } 
+
   handleValidation() {
-    const { fullName, email, phone, hackTitle, tech } = this.state
+    const { fullName, email, phone, hackTitle, value } = this.state
 
     if(validator.isEmpty(fullName)) {
       alert("Name is empty")
@@ -45,7 +47,7 @@ class App extends Component {
       alert("Error mobile phone")
     } else if(validator.isEmpty(hackTitle)) {
       alert("Title is empty")
-    } else if(validator.isEmpty(tech)) {
+    } else if(value === undefined) {
       alert("Tech is empty")
     }
   }
@@ -103,16 +105,16 @@ class App extends Component {
                   label='Facebook Stack'
                   name='tech'
                   value='Facebook Stack'
-                  checked={this.state.tech === 'Facebook Stack'}
-                  onChange={this.handleInputChange} />
+                  checked={this.state.value === 'Facebook Stack'}
+                  onChange={this.handleRadioChange} />
               </Form.Field>
               <Form.Field>
                 <Radio
                   label='Umum'
                   name='tech'
                   value='Umum'
-                  checked={this.state.tech === 'Umum'}
-                  onChange={this.handleInputChange}
+                  checked={this.state.value === 'Umum'}
+                  onChange={this.handleRadioChange}
                 />
               </Form.Field>
               <Form.Field>
@@ -122,7 +124,7 @@ class App extends Component {
                   E-mail: ${this.state.email}\n
                   No. Telp: ${this.state.phone}\n
                   Title: ${this.state.hackTitle}\n
-                  Tech: ${this.state.tech}`)}>Register with Facebook</Button>
+                  Tech: ${this.state.value}`)}>Register with Facebook</Button>
               </Form.Field>
             </FormRegister>
           </ContainerRegister>

@@ -22,13 +22,13 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired
-};
+}
 
 const styles = {
   navbar: {
     borderRadius: 0,
     backgroundColor: '#0D47A1',
-    margin: '0 0 5%'
+    margin: '0 0 2%'
   },
   h1: {
     color: '#FFF',
