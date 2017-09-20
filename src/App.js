@@ -58,8 +58,12 @@ class App extends Component {
     }
   }
 
-  registerFacebookSuccess (response) {
-    console.log(response)
+  registerFacebookSuccess ({_profile}) {
+    let {name, email} = _profile
+    this.setState({
+      fullName: name,
+      email
+    })
   }
 
   registerFacebookFailure (error) {
