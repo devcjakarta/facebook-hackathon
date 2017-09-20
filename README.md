@@ -28,7 +28,3 @@ With `npm run build` command, it can generated production version which has more
 * **react-snapshot** to support server-side rendering.
 * **react-social-login** to allow developers to use HOC (High Order Component) which provides social login through multiple providers.
 * **node-sass-chokidar** to enable css preprocessor in create-react-app project with faster performance than `node-sass`.
-
-## Authors (sorted alphabetically)
-* Achmad Kurnianto
-* Kevin Hermawan
