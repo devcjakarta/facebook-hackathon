@@ -17,6 +17,7 @@ class App extends Component {
       email: '',
       phone: '',
       hackTitle: '',
+      tech: 'Facebook Stack'
     }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleValidation = this.handleValidation.bind(this)
@@ -31,8 +32,10 @@ class App extends Component {
     })
   }
 
-  handleRadioChange = (e, {value}) => {
-    this.setState({value})
+  handleRadioChange = (_, {name, value}) => {
+    this.setState({
+      [name]: value
+    })
   }
 
   handleValidation() {
@@ -116,7 +119,7 @@ class App extends Component {
                   label='Facebook Stack'
                   name='tech'
                   value='Facebook Stack'
-                  checked={this.state.value === 'Facebook Stack'}
+                  checked={this.state.tech === 'Facebook Stack'}
                   onChange={this.handleRadioChange} />
               </Form.Field>
               <Form.Field>
@@ -124,7 +127,7 @@ class App extends Component {
                   label='Umum'
                   name='tech'
                   value='Umum'
-                  checked={this.state.value === 'Umum'}
+                  checked={this.state.tech === 'Umum'}
                   onChange={this.handleRadioChange}
                 />
               </Form.Field>
@@ -136,12 +139,6 @@ class App extends Component {
                   onLoginSuccess={this.registerFacebookSuccess}
                   onLoginFailure={this.registerFacebookFailure}
                   >Register with Facebook</ButtonSocial>
-                {/* <Button color="facebook" onClick={() => alert(`
-                  Name : ${this.state.fullName}\n
-                  E-mail: ${this.state.email}\n
-                  No. Telp: ${this.state.phone}\n
-                  Title: ${this.state.hackTitle}\n
-                  Tech: ${this.state.value}`)}>Register with Facebook</Button> */}
               </Form.Field>
             </FormRegister>
           </ContainerRegister>
