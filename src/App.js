@@ -53,7 +53,7 @@ class App extends Component {
       alert("Error mobile phone")
     } else if(validator.isEmpty(hackTitle)) {
       alert("Title is empty")
-    } else if(value === undefined) {
+    } else if(value === "") {
       alert("Tech is empty")
     }
   }
