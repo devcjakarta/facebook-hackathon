@@ -9,7 +9,7 @@
     "react-scripts": "1.0.13",
     "react-snapshot": "^1.2.0",
     "react-social-login": "^3.2.0",
-    "semantic-ui-react": "^0.73.1",
+    "semantic-ui-react": "^0.74.1",
     "validator": "^8.2.0"
   },
   "scripts": {
