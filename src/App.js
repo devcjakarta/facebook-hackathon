@@ -13,11 +13,13 @@ class App extends Component {
     super()
 
     this.state = {
-      fullName: '',
-      email: '',
-      phone: '',
-      hackTitle: '',
-      tech: 'Facebook Stack'
+      formData: {
+        fullName: '',
+        email: '',
+        phone: '',
+        hackTitle: '',
+        tech: 'Facebook Stack'
+      },
     }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleValidation = this.handleValidation.bind(this)
@@ -28,18 +30,24 @@ class App extends Component {
   handleInputChange({target}) {
     let {name, value} = target
     this.setState({
-      [name]: value
+      formData: {
+        ...this.state.formData,
+        [name]: value
+      }
     })
   }
 
   handleRadioChange = (_, {name, value}) => {
     this.setState({
-      [name]: value
+      formData: {
+        ...this.state.formData,
+        [name]: value
+      }
     })
   }
 
   handleValidation() {
-    const { fullName, email, phone, hackTitle, value } = this.state
+    const { fullName, email, phone, hackTitle, value } = this.state.formData
 
     if(validator.isEmpty(fullName)) {
       alert("Name is empty")
@@ -61,8 +69,12 @@ class App extends Component {
   registerFacebookSuccess ({_profile}) {
     let {name, email} = _profile
     this.setState({
-      fullName: name,
-      email
+      formData: {
+        ...this.state.formData,
+        fullName: name,
+        email
+      },
+      useFacebook: true
     })
   }
 
@@ -71,6 +83,7 @@ class App extends Component {
   }
 
   render() {
+    let {email, fullName, hackTitle, phone, tech} = this.state.formData
     return (
       <div className="App">
         <div className="App-header">
@@ -88,7 +101,7 @@ class App extends Component {
                 type="text"
                 name="fullName"
                 onChange={this.handleInputChange}
-                value={this.state.fullName}
+                value={fullName}
                 placeholder="Masukan nama lengkap" />
 
               <FormField
@@ -96,7 +109,7 @@ class App extends Component {
                 type="email"
                 name="email"
                 onChange={this.handleInputChange}
-                value={this.state.email}
+                value={email}
                 placeholder="Masukan alamat e-mail" />
 
               <FormField
@@ -104,7 +117,7 @@ class App extends Component {
                 type="number"
                 name="phone"
                 onChange={this.handleInputChange}
-                value={this.state.phone}
+                value={phone}
                 placeholder="Masukan nomor telepon" />
 
               <FormField
@@ -112,7 +125,7 @@ class App extends Component {
                 type="text"
                 name="hackTitle"
                 onChange={this.handleInputChange}
-                value={this.state.hackTitle}
+                value={hackTitle}
                 placeholder="Masukan judul hackathon" />
 
               <Form.Field>
@@ -123,7 +136,7 @@ class App extends Component {
                   label='Facebook Stack'
                   name='tech'
                   value='Facebook Stack'
-                  checked={this.state.tech === 'Facebook Stack'}
+                  checked={tech === 'Facebook Stack'}
                   onChange={this.handleRadioChange} />
               </Form.Field>
               <Form.Field>
@@ -131,7 +144,7 @@ class App extends Component {
                   label='Umum'
                   name='tech'
                   value='Umum'
-                  checked={this.state.tech === 'Umum'}
+                  checked={tech === 'Umum'}
                   onChange={this.handleRadioChange}
                 />
               </Form.Field>
