@@ -20,6 +20,7 @@ class App extends Component {
         hackTitle: '',
         tech: 'Facebook Stack'
       },
+      useFacebook: false
     }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleValidation = this.handleValidation.bind(this)
@@ -150,12 +151,17 @@ class App extends Component {
               </Form.Field>
               <Form.Field>
                 <Button positive onClick={this.handleValidation}>Register</Button>
-                <ButtonSocial
-                  provider="facebook"
-                  appId="787169631462897"
-                  onLoginSuccess={this.registerFacebookSuccess}
-                  onLoginFailure={this.registerFacebookFailure}
-                  >Register with Facebook</ButtonSocial>
+                {
+                  !this.state.useFacebook && (
+                    <ButtonSocial
+                      provider="facebook"
+                      appId="787169631462897"
+                      onLoginSuccess={this.registerFacebookSuccess}
+                      onLoginFailure={this.registerFacebookFailure}>
+                        Register with Facebook
+                    </ButtonSocial>
+                  )
+                }
               </Form.Field>
             </FormRegister>
           </ContainerRegister>
