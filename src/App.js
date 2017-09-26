@@ -101,7 +101,7 @@ class App extends Component {
 
               <FormField
                 label="No. Telepon"
-                type="text"
+                type="number"
                 name="phone"
                 onChange={this.handleInputChange}
                 value={this.state.phone}
