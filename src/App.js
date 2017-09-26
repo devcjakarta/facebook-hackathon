@@ -84,7 +84,8 @@ class App extends Component {
   }
 
   render() {
-    let {email, fullName, hackTitle, phone, tech} = this.state.formData
+    let {formData, useFacebook} = this.state
+    let {email, fullName, hackTitle, phone, tech} = formData
     return (
       <div className="App">
         <div className="App-header">
@@ -103,6 +104,7 @@ class App extends Component {
                 name="fullName"
                 onChange={this.handleInputChange}
                 value={fullName}
+                disabled={useFacebook}
                 placeholder="Masukan nama lengkap" />
 
               <FormField
@@ -111,6 +113,7 @@ class App extends Component {
                 name="email"
                 onChange={this.handleInputChange}
                 value={email}
+                disabled={useFacebook}
                 placeholder="Masukan alamat e-mail" />
 
               <FormField
