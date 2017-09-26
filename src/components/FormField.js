@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Form } from 'semantic-ui-react'
+import { Form, Input } from 'semantic-ui-react'
 
 class FormField extends Component {
   render() {
+    let {label, type, name, onChange, value, placeholder, disabled, ...rest} = this.props
     return (
       <Form.Field>
-        <label>{this.props.label}</label>
-        <input
-          type={this.props.type}
-          name={this.props.name}
-          onChange={this.props.onChange}
-          value={this.props.value}
-          placeholder={this.props.placeholder} />
+        <label>{label}</label>
+        <Input
+          type={type}
+          name={name}
+          onChange={onChange}
+          value={value}
+          disabled={disabled}
+          placeholder={placeholder}
+          {...rest}
+         />
       </Form.Field>
     )
   }
