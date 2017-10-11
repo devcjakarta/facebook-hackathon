@@ -14,10 +14,10 @@ class App extends Component {
 
     this.state = {
       formData: {
-        fullName: '',
+        name: '',
         email: '',
         phone: '',
-        hackTitle: '',
+        title: '',
         tech: 'Facebook Stack'
       },
       useFacebook: false
@@ -48,9 +48,9 @@ class App extends Component {
   }
 
   handleValidation() {
-    const { fullName, email, phone, hackTitle, value } = this.state.formData
+    const { name, email, phone, title, value } = this.state.formData
 
-    if(validator.isEmpty(fullName)) {
+    if(validator.isEmpty(name)) {
       alert("Name is empty")
     } else if(validator.isEmpty(email)) {
       alert("Email is empty")
@@ -60,11 +60,27 @@ class App extends Component {
       alert("Phone is empty")
     } else if(!validator.isMobilePhone(phone, 'id-ID')) {
       alert("Error mobile phone")
-    } else if(validator.isEmpty(hackTitle)) {
+    } else if(validator.isEmpty(title)) {
       alert("Title is empty")
     } else if(value === "") {
       alert("Tech is empty")
+    } else {
+      this.submitToService(this.state.formData)
     }
+  }
+
+  submitToService(data) {
+    console.log(data)
+    let body = new FormData()
+    body.append('json', JSON.stringify(data))
+    fetch('http://localhost:5000/api/v1/user', {
+      method: 'POST',
+      body: body
+    }).then((res) => {
+      res.json()
+    }).then((data) => {
+      alert(JSON.stringify(data))
+    })
   }
 
   registerFacebookSuccess ({_profile}) {
@@ -72,7 +88,7 @@ class App extends Component {
     this.setState({
       formData: {
         ...this.state.formData,
-        fullName: name,
+        name: name,
         email
       },
       useFacebook: true
@@ -85,7 +101,7 @@ class App extends Component {
 
   render() {
     let {formData, useFacebook} = this.state
-    let {email, fullName, hackTitle, phone, tech} = formData
+    let {email, name, title, phone, tech} = formData
     return (
       <div className="App">
         <div className="App-header">
@@ -101,9 +117,9 @@ class App extends Component {
               <FormField
                 label="Nama lengkap"
                 type="text"
-                name="fullName"
+                name="name"
                 onChange={this.handleInputChange}
-                value={fullName}
+                value={name}
                 disabled={useFacebook}
                 placeholder="Masukan nama lengkap" />
 
@@ -127,9 +143,9 @@ class App extends Component {
               <FormField
                 label="Judul Hackathon"
                 type="text"
-                name="hackTitle"
+                name="title"
                 onChange={this.handleInputChange}
-                value={hackTitle}
+                value={title}
                 placeholder="Masukan judul hackathon" />
 
               <Form.Field>
