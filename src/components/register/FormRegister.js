@@ -149,18 +149,22 @@ class FormRegister extends PureComponent {
                 { errors.title && <InlineError text={errors.title} />}
               </Form.Field>
 
-              <Form.Group inline>
+              <Form.Group grouped>
                 <label htmlFor="tech">Teknologi</label>
-                <Radio
+                <Form.Field
                   label='Facebook Stack'
                   name='tech'
                   value='Facebook Stack'
+                  control="input"
+                  type="radio"
                   checked={data.tech === 'Facebook Stack'}
                   onChange={this.handleRadioChange} />
-                <Radio
+                <Form.Field
                   label='Umum'
                   name='tech'
                   value='Umum'
+                  control="input"
+                  type="radio"
                   checked={data.tech === 'Umum'}
                   onChange={this.handleRadioChange}
                 />
