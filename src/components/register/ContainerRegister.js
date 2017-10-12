@@ -4,7 +4,7 @@ import { Container, Grid } from 'semantic-ui-react'
 import LabelRegister from './LabelRegister'
 import FormRegister from './FormRegister'
 
-import API from '../../api/config'
+import {submitRegisterData} from '../../utils/register/methods'
 
 class ContainerRegister extends PureComponent {
   submit = (data) => {
