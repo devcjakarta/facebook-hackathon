@@ -1,14 +1,24 @@
 input[type=number] {
   -moz-appearance: textfield;
+
+  &:hover,
+  &:focus {
+    -moz-appearance: number-input;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-textfield-decoration-container {
+    border: 1px #ccc solid;
+    background: #efefef;
+  }
 }
 
-::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
 
-::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
 
 body {
   background-color: #1565C0;
