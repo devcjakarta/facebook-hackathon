@@ -16,6 +16,8 @@ class FormRegister extends PureComponent {
     email: '',
     phone: '',
     title: '',
+    url: '',
+    file: '',
     tech: 'Facebook Stack'
   }
   state = {
@@ -131,7 +133,7 @@ class FormRegister extends PureComponent {
               </Form.Field>
               <Form.Field required error={!!errors.phone}>
                 <label htmlFor="phone">No. Telepon</label>
-                <Input type="number"
+                <Input type="text"
                   name="phone"
                   onChange={this.handleInputChange}
                   value={data.phone}
@@ -146,6 +148,16 @@ class FormRegister extends PureComponent {
                   onChange={this.handleInputChange}
                   value={data.title}
                   placeholder="Masukan judul hackathon" />
+                { errors.title && <InlineError text={errors.title} />}
+              </Form.Field>
+
+              <Form.Field required error={!!errors.title}>
+                <label htmlFor="title">URL</label>
+                <Input type="text"
+                  name="url"
+                  onChange={this.handleInputChange}
+                  value={data.url}
+                  placeholder="Masukan URL" />
                 { errors.title && <InlineError text={errors.title} />}
               </Form.Field>
 
