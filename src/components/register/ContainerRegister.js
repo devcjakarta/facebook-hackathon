@@ -11,7 +11,7 @@ function ContainerRegister () {
     <Container>
       <Grid>
         <LabelRegister
-          title="Facebook Hackathon"
+          title="Jakarta Challenge 2017"
           subTitle="Bring the world, closer together."
         />
         <FormRegister submit={submitRegisterData} />
