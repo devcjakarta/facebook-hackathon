@@ -34,15 +34,10 @@ class FormRegister extends PureComponent {
       data: {
         ...this.state.data,
         [name]: value
-      }
-    })
-  }
-
-  handleRadioChange = (_, {name, value}) => {
-    this.setState({
-      data: {
-        ...this.state.data,
-        [name]: value
+      },
+      errors: {
+        ...this.state.errors,
+        [name]: value.length === 0
       }
     })
   }
@@ -85,6 +80,11 @@ class FormRegister extends PureComponent {
         ...this.state.data,
         name,
         email
+      },
+      errors: {
+        ...this.state.errors,
+        name: '',
+        email: ''
       },
       useFacebook: true,
       loading: false
