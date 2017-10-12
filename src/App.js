@@ -102,6 +102,7 @@ class App extends Component {
   render() {
     let {formData, useFacebook} = this.state
     let {email, name, title, phone, tech} = formData
+    const image = 'http://freevectorlogo.net/wp-content/uploads/2013/11/facebook-flat-vector-logo-400x400.png'
     return (
       <div className="App">
         <div className="App-header">
@@ -112,7 +113,15 @@ class App extends Component {
             <LabelRegister
               title="Facebook Hackathon"
               subTitle="Bring the world, closer together."
-            />
+              organizeName="Facebook"
+              organizeImg={image}
+              sponsorImg1={image}
+              sponsorImg2={image}
+              sponsorImg3={image}
+              mediaPartnerImg1={image}
+              mediaPartnerImg2={image}
+              mediaPartnerImg3={image}
+              mediaPartnerImg4={image} />
             <FormRegister>
               <FormField
                 label="Nama lengkap"
