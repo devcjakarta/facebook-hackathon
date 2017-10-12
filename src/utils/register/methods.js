@@ -21,9 +21,6 @@ export function submitRegisterData (data) {
   return new Promise((resolve, reject) => {
     API.post('/user', stringify(data))
     .then(res => resolve(res))
-    .catch(err => {
-      console.log(JSON.stringify(err, null, 2))
-      reject(err)
-    })
+    .catch(err => reject(err))
   })
 }

@@ -51,7 +51,6 @@ class FormRegister extends PureComponent {
       this.setState({ loading: true })
       this.props.submit(this.state.data)
         .then(res => {
-          console.log(res)
           this.setState({
             loading: false,
             data: this.initialState,
@@ -60,7 +59,6 @@ class FormRegister extends PureComponent {
           })
         })
         .catch(response => {
-          console.log(JSON.stringify(response, null, 2))
           this.setState({
             loading: false,
             response
@@ -94,7 +92,6 @@ class FormRegister extends PureComponent {
   }
 
   registerFacebookFailure = response => {
-    console.log(response)
     this.setState({
       loading: false,
       response
