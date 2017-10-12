@@ -7,7 +7,7 @@ import API from '../../api/config'
 
 export function displayMessage (response) {
    if (response.status && (response.status === 200)) return (
-    <DismissableMessage success={response.status === 200} header={response.message} content="Your data has been submitted" />
+    <DismissableMessage success={response.status === 200} header="Registration Success" content="Your data has been submitted" />
   )
   if (response.message && (response.message.includes('Authentication failed'))) return (
     <DismissableMessage error={response.message.includes('Authentication failed')} header='Registration Failed' content="Failed to register with facebook" />
