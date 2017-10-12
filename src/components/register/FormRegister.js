@@ -188,7 +188,7 @@ class FormRegister extends PureComponent {
                   !this.state.useFacebook && (
                     <ButtonSocial
                       provider="facebook"
-                      appId="787169631462897"
+                      appId="1436210843160846"
                       onClick={this.socialLogin}
                       onLoginSuccess={this.registerFacebookSuccess}
                       onLoginFailure={this.registerFacebookFailure}>
