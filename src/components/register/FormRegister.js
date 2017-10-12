@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Card, Form, Input, Radio, Button } from 'semantic-ui-react'
+import { Grid, Card, Form, Input, Button } from 'semantic-ui-react'
 
 import '../../styles/register/form-register.css'
 
@@ -151,22 +151,22 @@ class FormRegister extends PureComponent {
 
               <Form.Group grouped>
                 <label htmlFor="tech">Teknologi</label>
-                <Form.Field
+                <Form.Radio
                   label='Facebook Stack'
                   name='tech'
                   value='Facebook Stack'
                   control="input"
                   type="radio"
                   checked={data.tech === 'Facebook Stack'}
-                  onChange={this.handleRadioChange} />
-                <Form.Field
+                  onChange={this.handleInputChange} />
+                <Form.Radio
                   label='Umum'
                   name='tech'
                   value='Umum'
                   control="input"
                   type="radio"
                   checked={data.tech === 'Umum'}
-                  onChange={this.handleRadioChange}
+                  onChange={this.handleInputChange}
                 />
               </Form.Group>
 
