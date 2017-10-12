@@ -151,14 +151,14 @@ class FormRegister extends PureComponent {
                 { errors.title && <InlineError text={errors.title} />}
               </Form.Field>
 
-              <Form.Field required error={!!errors.title}>
+              <Form.Field required error={!!errors.url}>
                 <label htmlFor="title">URL</label>
                 <Input type="text"
                   name="url"
                   onChange={this.handleInputChange}
                   value={data.url}
                   placeholder="Masukan URL" />
-                { errors.title && <InlineError text={errors.title} />}
+                { errors.url && <InlineError text={errors.url} />}
               </Form.Field>
 
               <Form.Group grouped>
