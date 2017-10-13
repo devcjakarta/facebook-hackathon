@@ -1,7 +1,7 @@
 import {create} from 'axios'
 
 const API = create({
-  baseURL: 'http://localhost:5000/api/v1'
+  baseURL: 'http://jakarta-challenge.devcid.com/services'
 })
 
 export default API

@@ -37,3 +37,26 @@ img#imgGoldSponsor {
 
 img#imgSupporter1 {
   width: 120px; }
+
+.App-sponsor {
+  margin-top: 20px; }
+
+.App-sponsor div.menu {
+  padding-top: 5px; }
+
+.App-sponsor div.column {
+  margin-left: 10px; }
+
+.App-sponsor img {
+  width: 80px;
+  padding-top: 3px; }
+
+.communityLogo img {
+  margin-left: 3px; }
+
+.MenuBottom a {
+  padding: 0 3px 0 3px; }
+
+.App-footer div.column {
+  font-size: 10px;
+  color: #ddd; }
