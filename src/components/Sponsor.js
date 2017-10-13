@@ -7,7 +7,7 @@ function Sponsor ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg
     <Menu style={styles.sponsor}>
       <Container>
         <Grid.Column>
-          <div style={{fontSize: 12}}>Organize By</div>
+          <div style={{fontSize: 12}}>Organized By</div>
           <img id="imgOrganizer" src={organizerImg} alt='{organizerName}' />
         </Grid.Column>
         <Grid.Column>

@@ -51,6 +51,9 @@ img#imgSupporter1 {
   width: 80px;
   padding-top: 3px; }
 
+.App-sponsor div.communityLogo img {
+  padding-top: 15px; }
+
 .communityLogo img {
   margin-left: 3px; }
 
