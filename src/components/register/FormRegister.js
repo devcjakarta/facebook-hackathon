@@ -158,6 +158,17 @@ class FormRegister extends PureComponent {
                 { errors.url && <InlineError text={errors.url} />}
               </Form.Field>
 
+              <Form.Field required error={!!errors.url}>
+                <label htmlFor="title">Dokumen <i>(max 10Mb)</i></label>
+                <Input type="file"
+                  id="file"
+                  name="file"
+                  onChange={this.handleInputChange}
+                  value={data.file}
+                  placeholder="Dokumen Anda" />
+                { errors.url && <InlineError text={errors.url} />}
+              </Form.Field>
+
               <Form.Group grouped>
                 <label htmlFor="tech">Teknologi</label>
                 <Form.Radio
