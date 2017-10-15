@@ -85,6 +85,20 @@ img#imgSupporter1 {
   padding: 0 3px 0 3px;
 }
 
+.menu-topright {
+  float:right;
+  padding: 0 5px 0 5px;
+  font-size:14px;
+  color:red;
+}
+
+.menu-topright a:link, a:visited {
+  color:yellow;
+}
+.menu-topright a:hover {
+  color:red;
+}
+
 .App-footer div.column {
   font-size: 10px;
   color: #ddd;

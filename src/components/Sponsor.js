@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Menu, Container, Grid } from 'semantic-ui-react'
 
-function Sponsor ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg, sponsorSilverImg, supporter1Img, supporter2Img, communityPartnerImg1, communityPartnerImg2, communityPartnerImg3, communityPartnerImg4, communityPartnerImg5 }) {
+function Sponsor ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg, sponsorSilverImg, supporter1Img, supporter2Img, supporter3Img, communityPartnerImg1, communityPartnerImg2, communityPartnerImg3, communityPartnerImg4, communityPartnerImg5 }) {
   return (
     <Menu style={styles.sponsor}>
       <Container>
@@ -20,6 +20,7 @@ function Sponsor ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg
         </Grid.Column>
         <Grid.Column>
           <div style={{fontSize: 12}}>Supported By</div>
+          <img id="imgSupporter3" src={supporter3Img} alt='Blibli' /> 
           <img id="imgSupporter1" src={supporter1Img} alt='Buka Lapak' />
           <img id="imgSupporter2" src={supporter2Img} alt='Kudo' /> 
         </Grid.Column>
@@ -30,12 +31,6 @@ function Sponsor ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg
           <div style={{float: 'left'}}><img id="imgCommunityPartner3" src={communityPartnerImg3} alt='' /></div>
           <div style={{float: 'left'}}><img id="imgCommunityPartner4" src={communityPartnerImg4} alt='' /></div>
           <div style={{float: 'left'}}><img id="imgCommunityPartner5" src={communityPartnerImg5} alt='' /></div>
-        </Grid.Column>
-        <Grid.Column className="MenuBottom">
-          <div style={{fontSize: 12}}>
-            <a href="http://jakarta-challenge.devcid.com/about">About Us</a>
-            <a href="http://jakarta-challenge.devcid.com/faq">FAQ</a>
-          </div>
         </Grid.Column>
       </Container>
     </Menu>

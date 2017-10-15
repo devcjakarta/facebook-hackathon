@@ -12,8 +12,11 @@ class Navbar extends Component {
               <Header.Content>
                   {this.props.title}
               </Header.Content>
-              <div style={{float: 'right', fontSize: 14}}>
+              <div className="menu-topright">
                 <a href="http://jakarta-challenge.devcid.com/faq">FAQ</a>
+              </div>
+              <div className="menu-topright">
+                <a href="http://jakarta-challenge.devcid.com/about">About</a>
               </div>
             </Container>
           </Header>

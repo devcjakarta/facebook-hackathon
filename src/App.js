@@ -24,6 +24,7 @@ function App () {
           sponsorSilverName="MainAPI"
           supporter1Img="http://jakarta-challenge.devcid.com/static/media/logo-bukalapak.png"
           supporter2Img="http://jakarta-challenge.devcid.com/static/media/logo-kudo.png"
+          supporter3Img="http://jakarta-challenge.devcid.com/static/media/logo-blibli.jpg"
           communityPartnerImg1="http://jakarta-challenge.devcid.com/static/media/logo-femalegeek.png"
           communityPartnerImg2="http://jakarta-challenge.devcid.com/static/media/logo-jakartajs.jpeg"
           communityPartnerImg3="http://jakarta-challenge.devcid.com/static/media/logo-pascalindonesia.jpg"
