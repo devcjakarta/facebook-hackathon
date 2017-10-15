@@ -9,7 +9,7 @@ const sponsorLists = [{
   computerGrid: 2,
   lists: [{
     name: 'Hacktiv8',
-    imageSrc: require('../assets/images/logo_hacktiv8.png')
+    imageSrc: require('../assets/images/logo-hacktiv8-transparent.png')
   }]
 }, {
   text: 'Gold Sponsor',
