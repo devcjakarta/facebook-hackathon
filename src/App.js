@@ -15,22 +15,7 @@ function App () {
         <ContainerRegister />
       </div>
       <div className="App-sponsor">
-        <Sponsor 
-          organizerName="Hacktiv8"
-          organizerImg="http://jakarta-challenge.devcid.com/static/media/logo_hacktiv8.png"
-          sponsorGoldName="Facebook"
-          sponsorGoldImg="http://jakarta-challenge.devcid.com/static/media/logo-facebook.png"          
-          sponsorSilverImg="http://jakarta-challenge.devcid.com/static/media/logo-mainapi.png"
-          sponsorSilverName="MainAPI"
-          supporter1Img="http://jakarta-challenge.devcid.com/static/media/logo-bukalapak.png"
-          supporter2Img="http://jakarta-challenge.devcid.com/static/media/logo-kudo.png"
-          supporter3Img="http://jakarta-challenge.devcid.com/static/media/logo-blibli.jpg"
-          communityPartnerImg1="http://jakarta-challenge.devcid.com/static/media/logo-femalegeek.png"
-          communityPartnerImg2="http://jakarta-challenge.devcid.com/static/media/logo-jakartajs.jpeg"
-          communityPartnerImg3="http://jakarta-challenge.devcid.com/static/media/logo-pascalindonesia.jpg"
-          communityPartnerImg4="http://jakarta-challenge.devcid.com/static/media/logo-phpindonesia.png"
-          communityPartnerImg5="http://jakarta-challenge.devcid.com/static/media/logo-saic.png"
-        />
+        <Sponsor />
       </div>
       <div className="App-footer">
         <Footer />

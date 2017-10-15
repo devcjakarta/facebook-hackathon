@@ -1,46 +1,79 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Menu, Container, Grid } from 'semantic-ui-react'
+import { Menu, Grid } from 'semantic-ui-react'
 
-function Sponsor ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg, sponsorSilverImg, supporter1Img, supporter2Img, supporter3Img, communityPartnerImg1, communityPartnerImg2, communityPartnerImg3, communityPartnerImg4, communityPartnerImg5 }) {
+import SponsorList from './SponsorList'
+
+const sponsorLists = [{
+  text: 'Organized By',
+  tabletGrid: 5,
+  computerGrid: 2,
+  lists: [{
+    name: 'Hacktiv8',
+    imageSrc: require('../assets/images/logo_hacktiv8.png')
+  }]
+}, {
+  text: 'Gold Sponsor',
+  tabletGrid: 5,
+  computerGrid: 2,
+  lists: [{
+    name: 'Facebook',
+    imageSrc: require('../assets/images/logo-facebook.png')
+  }]
+}, {
+  text: 'Silver Sponsor',
+  tabletGrid: 5,
+  computerGrid: 2,
+  lists: [{
+    name: 'mainAPI',
+    imageSrc: require('../assets/images/logo-mainapi.png')
+  }]
+}, {
+  text: 'Supported By',
+  tabletGrid: 7,
+  computerGrid: 3,
+  lists: [{
+    name: 'Blibli',
+    imageSrc: require('../assets/images/logo-blibli.jpg')
+  }, {
+    name: 'Bukalapak',
+    imageSrc: require('../assets/images/logo-bukalapak.png')
+  }, {
+    name: 'Kudo',
+    imageSrc: require('../assets/images/logo-kudo.png')
+  }]
+}, {
+  text: 'Community Partner',
+  className: 'communityLogo',
+  tabletGrid: 7,
+  computerGrid: 3,
+  lists: [{
+    name: 'FemaleGeek',
+    imageSrc: require('../assets/images/logo-femalegeek.png')
+  }, {
+    name: 'JakartaJS',
+    imageSrc: require('../assets/images/logo-jakartajs.jpeg')
+  }, {
+    name: 'Pascal Indonesia',
+    imageSrc: require('../assets/images/logo-pascalindonesia.jpg')
+  }, {
+    name: 'PHP Indonesia',
+    imageSrc: require('../assets/images/logo-phpindonesia.png')
+  }, {
+    name: 'Software Architect Indonesia Community',
+    imageSrc: require('../assets/images/logo-saic.png')
+  }]
+}]
+
+function Sponsor () {
   return (
     <Menu style={styles.sponsor}>
-      <Container>
-        <Grid.Column>
-          <div style={{fontSize: 12}}>Organized By</div>
-          <img id="imgOrganizer" src={organizerImg} alt='{organizerName}' />
-        </Grid.Column>
-        <Grid.Column>
-          <div style={{fontSize: 12}}>Gold Sponsor</div>
-          <img id="imgGoldSponsor" src={sponsorGoldImg} alt='Gold Sponsor' /> 
-        </Grid.Column>
-        <Grid.Column>
-          <div style={{fontSize: 12}}>Silver Sponsor</div>
-          <img id="imgGoldSponsor" src={sponsorSilverImg} alt='Silver Sponsor' /> 
-        </Grid.Column>
-        <Grid.Column>
-          <div style={{fontSize: 12}}>Supported By</div>
-          <img id="imgSupporter3" src={supporter3Img} alt='Blibli' /> 
-          <img id="imgSupporter1" src={supporter1Img} alt='Buka Lapak' />
-          <img id="imgSupporter2" src={supporter2Img} alt='Kudo' /> 
-        </Grid.Column>
-        <Grid.Column className="communityLogo">
-          <div style={{fontSize: 12}}>Community Partner</div>
-          <div style={{float: 'left'}}><img id="imgCommunityPartner1" src={communityPartnerImg1} alt='' /></div>
-          <div style={{float: 'left'}}><img id="imgCommunityPartner2" src={communityPartnerImg2} alt='' /></div>
-          <div style={{float: 'left'}}><img id="imgCommunityPartner3" src={communityPartnerImg3} alt='' /></div>
-          <div style={{float: 'left'}}><img id="imgCommunityPartner4" src={communityPartnerImg4} alt='' /></div>
-          <div style={{float: 'left'}}><img id="imgCommunityPartner5" src={communityPartnerImg5} alt='' /></div>
-        </Grid.Column>
-      </Container>
+      <Grid centered style={{width: '100%'}}>
+        {
+          sponsorLists.map((sponsorList, i) => <SponsorList key={i} {...sponsorList} />)
+        }
+      </Grid>
     </Menu>
   )
-}
-
-
-Sponsor.propTypes = {
-  organizerName: PropTypes.string,
-  title: PropTypes.string.isRequired
 }
 
 const styles = {
