@@ -13,5 +13,6 @@ export function validateRegisterData (data) {
   if (isEmpty(data.title)) errors.title = "Judul hackathon harus diisi"
   if (isEmpty(data.url)) errors.url = "URL harus diisi"
   if (!isURL(data.url)) errors.url = (errors.url && errors.url.length) ? `${errors.url} dan valid` : "URL harus valid"
+  if (isEmpty(data.file)) errors.file = "Dokumen harus diunggah"
   return errors
 }
