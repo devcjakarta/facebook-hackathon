@@ -30,16 +30,19 @@ const sponsorLists = [{
 }, {
   text: 'Supported By',
   tabletGrid: 7,
-  computerGrid: 3,
+  computerGrid: 4,
   lists: [{
     name: 'Blibli',
-    imageSrc: require('../assets/images/logo-blibli.jpg')
+    imageSrc: require('../assets/images/logo-blibli-80.jpg')
   }, {
     name: 'Bukalapak',
     imageSrc: require('../assets/images/logo-bukalapak.png')
   }, {
     name: 'Kudo',
     imageSrc: require('../assets/images/logo-kudo.png')
+  }, {
+    name: 'Tokopedia',
+    imageSrc: require('../assets/images/logo-tokopedia.png')    
   }]
 }, {
   text: 'Community Partner',
