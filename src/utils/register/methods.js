@@ -20,13 +20,9 @@ export function displayMessage (response) {
 export function submitRegisterData (data) {
   const formData = new FormData();
   var inputFile = document.getElementById('file').files[0]
-  formData.append('name', data['name']);
-  formData.append('phone', data['phone']);
-  formData.append('email', data['email']);
-  formData.append('title', data['title']);
-  formData.append('tech', data['tech']);
-  formData.append('url', data['url']);
-  formData.append('file', inputFile)
+  Object.entries(data).forEach(([key, value]) => {
+    formData.append(key, (key !== 'file') ? value : inputFile)
+  })
   return new Promise((resolve, reject) => {
     API.post('/submission', (formData))
     .then(res => resolve(res))
