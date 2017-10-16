@@ -11,8 +11,9 @@ function ContainerRegister () {
     <Container>
       <Grid>
         <LabelRegister
-          title="Jakarta Challenge 2017"
-          subTitle="Bring the world, closer together."
+          title="Developer Circles Community Challenge"
+          subTitle="Jakarta Hack Day"
+          subTitleOld="Bring the world, closer together."
           lastSubmission="28 Oktober 2017"
           periode="11 November 2017"
         />
