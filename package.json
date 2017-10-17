@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "prop-types": "^15.6.0",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "react-scripts": "1.0.13",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
     "react-snapshot": "^1.2.0",
-    "react-social-login": "^3.2.0",
-    "semantic-ui-react": "^0.74.2",
-    "validator": "^8.2.0"
+    "react-social-login": "^3.2.1",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.75.0",
+    "validator": "^9.0.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

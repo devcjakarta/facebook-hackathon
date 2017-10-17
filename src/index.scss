@@ -1,0 +1,122 @@
+input[type=number] {
+  -moz-appearance: textfield;
+
+  &:hover,
+  &:focus {
+    -moz-appearance: number-input;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-textfield-decoration-container {
+    border: 1px #ccc solid;
+    background: #efefef;
+  }
+}
+
+
+
+body {
+  background-image: url('assets/images/background.png');
+  background-repeat: no-repeat;
+  background-position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI,Helvetica,Roboto,sans-serif;
+  user-select: none;
+}
+
+#root {
+  // background-color: #1565C0;
+}
+
+.label-register div {
+  color: #FFFFFF;
+  padding-right: 20px;
+}
+.label-register img {
+  width: 80px;
+  padding-top: 3px;
+}
+
+img#imgOrganizer{
+}
+
+img#imgGoldSponsor{
+  width: 120px;
+}
+
+img#imgSupporter1 {
+  width: 80px;
+}
+
+img#imgSupporter4 {
+  width: 90px;
+}
+
+img#imgMediaPartner {
+  width: 120px;
+}
+
+.App-sponsor {
+  margin-top: 20px;
+}
+
+.App-sponsor div.menu {
+  padding-top:5px;
+}
+
+.App-sponsor div.column {
+  margin-left: 10px;
+}
+.App-sponsor img {
+  width: 80px;
+  padding-top: 3px;
+}
+
+.App-sponsor div.communityLogo img {
+  padding-top: 15px;
+}
+
+.communityLogo img {
+  margin-left: 3px;
+}
+
+.MenuBottom a {
+  padding: 0 3px 0 3px;
+}
+
+.menu-topright {
+  float:right;
+  padding: 0 5px 0 5px;
+  font-size:14px;
+  color:red;
+}
+
+.menu-topright a:link, a:visited {
+  color:yellow;
+}
+.menu-topright a:hover {
+  color:red;
+}
+
+.App-footer div.column {
+  font-size: 10px;
+  color: #ddd;
+}
+
+.ui.header,
+.ui.card > .content > .header,
+.ui.list,
+ul.ui.list li::before,
+p,
+ul {
+  color: #fff;
+}
