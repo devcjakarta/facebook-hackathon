@@ -12,12 +12,12 @@ const sponsorLists = [{
     imageSrc: require('../assets/images/logo-hacktiv8-transparent.png')
   }]
 }, {
-  text: 'Gold Sponsor',
+  text: 'Media Partner',
   tabletGrid: 5,
   computerGrid: 2,
   lists: [{
-    name: 'Facebook',
-    imageSrc: require('../assets/images/logo-facebook.png')
+    name: 'Code Politan',
+    imageSrc: require('../assets/images/logo-codepolitan.png')
   }]
 }, {
   text: 'Silver Sponsor',
