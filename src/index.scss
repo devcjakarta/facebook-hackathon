@@ -21,7 +21,12 @@ input[type=number] {
 
 
 body {
-  background-color: #1565C0;
+  background-image: url('assets/images/background.png');
+  background-repeat: no-repeat;
+  background-position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: Segoe UI,Helvetica,Roboto,sans-serif;
@@ -29,12 +34,7 @@ body {
 }
 
 #root {
-  height: 100%;
-  background-image: url('assets/images/background.png');
-  background-repeat: no-repeat;
-  background-position: relative;
-  background-attachment: fixed;
-  background-size: cover;
+  // background-color: #1565C0;
 }
 
 .label-register div {
@@ -78,7 +78,7 @@ img#imgMediaPartner {
 }
 .App-sponsor img {
   width: 80px;
-  padding-top: 3px;  
+  padding-top: 3px;
 }
 
 .App-sponsor div.communityLogo img {
@@ -110,4 +110,13 @@ img#imgMediaPartner {
 .App-footer div.column {
   font-size: 10px;
   color: #ddd;
+}
+
+.ui.header,
+.ui.card > .content > .header,
+.ui.list,
+ul.ui.list li::before,
+p,
+ul {
+  color: #fff;
 }

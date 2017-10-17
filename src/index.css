@@ -10,19 +10,16 @@ input[type=number] {
     background: #efefef; }
 
 body {
-  background-color: #1565C0;
-  margin: 0;
-  padding: 0;
-  font-family: Segoe UI,Helvetica,Roboto,sans-serif;
-  user-select: none; }
-
-#root {
-  height: 100%;
   background-image: url("assets/images/background.png");
   background-repeat: no-repeat;
   background-position: relative;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI,Helvetica,Roboto,sans-serif;
+  user-select: none; }
 
 .label-register div {
   color: #FFFFFF;
@@ -81,3 +78,11 @@ img#imgMediaPartner {
 .App-footer div.column {
   font-size: 10px;
   color: #ddd; }
+
+.ui.header,
+.ui.card > .content > .header,
+.ui.list,
+ul.ui.list li::before,
+p,
+ul {
+  color: #fff; }

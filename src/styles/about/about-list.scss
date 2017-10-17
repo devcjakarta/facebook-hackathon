@@ -1,0 +1,20 @@
+.about-list {
+  h3 {
+    margin-top: 32px !important;
+  }
+
+  .about-list-contents {
+    padding-left: 20px;
+  }
+
+  .add-space {
+    line-height: 1.5 !important;
+  }
+
+  p:last-child,
+  li:last-child,
+  ul.ui.list li:last-child,
+  .item[role=listitem]:last-child {
+    padding-bottom: 32px;
+  }
+}
