@@ -26,6 +26,9 @@ const sponsorLists = [{
   lists: [{
     name: 'mainAPI',
     imageSrc: require('../assets/images/logo-mainapi.png')
+  },{
+    name: 'Awan Io',
+    imageSrc: require('../assets/images/logo-awanio.png')
   }]
 }, {
   text: 'Supported By',
