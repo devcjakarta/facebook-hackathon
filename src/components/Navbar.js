@@ -19,7 +19,7 @@ class Navbar extends Component {
               </div>
               <div className="menu-topright">
                 {/* <Link to="/about">About</Link> */}
-                <a href="http://jakarta-challenge.devcid.com/about">About</a>
+                <a href="http://jakarta-hackday.devcid.com/about">About</a>
               </div>
             </Container>
           </Header>

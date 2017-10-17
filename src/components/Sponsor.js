@@ -8,6 +8,9 @@ const sponsorLists = [{
   tabletGrid: 5,
   computerGrid: 2,
   lists: [{
+    name: 'DevC Jakarta',
+    imageSrc: require('../assets/images/logo-devcjkt.png')
+  },{
     name: 'Hacktiv8',
     imageSrc: require('../assets/images/logo-hacktiv8-transparent.png')
   }]
@@ -24,11 +27,11 @@ const sponsorLists = [{
   tabletGrid: 5,
   computerGrid: 2,
   lists: [{
-    name: 'mainAPI',
-    imageSrc: require('../assets/images/logo-mainapi.png')
-  },{
     name: 'Awan Io',
     imageSrc: require('../assets/images/logo-awanio.png')
+  },{
+    name: 'mainAPI',
+    imageSrc: require('../assets/images/logo-mainapi.png')
   }]
 }, {
   text: 'Supported By',
