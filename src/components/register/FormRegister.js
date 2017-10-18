@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Card, Form, Input, Button } from 'semantic-ui-react'
+import { Grid, Card, Form, Input, Button, TextArea } from 'semantic-ui-react'
 
 import '../../styles/register/form-register.css'
 
@@ -149,13 +149,14 @@ class FormRegister extends PureComponent {
                 { errors.title && <InlineError text={errors.title} />}
               </Form.Field>
 
-              <Form.Field required error={!!errors.title}>
+              <Form.Field required error={!!errors.description}>
                 <label htmlFor="description">Deskripsi Singkat</label>
-                <textarea
+                <TextArea
                   name="description"
+                  autoHeight
                   onChange={this.handleInputChange}
                   value={data.description}
-                  placeholder="Masukan judul hackathon" />
+                  placeholder="Tuliskan deskripsi singkat di sini" />
                 { errors.description && <InlineError text={errors.description} />}
               </Form.Field>
 
