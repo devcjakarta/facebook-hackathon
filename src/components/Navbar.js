@@ -15,10 +15,10 @@ class Navbar extends Component {
               </Header.Content>
               <div className="menu-topright">
                 {/* <a href="http://jakarta-challenge.devcid.com/faq">FAQ</a> */}
-                <Link to="/faq">FAQ</Link>
+                <Link to="http://jakarta-hackday.devcid.com/faq">FAQ</Link>
               </div>
               <div className="menu-topright">
-                <Link to="/about">About</Link>
+                <Link to="http://jakarta-hackday.devcid.com/about">About</Link>
                 {/* <a href="http://jakarta-hackday.devcid.com/about">About</a> */}
               </div>
             </Container>
