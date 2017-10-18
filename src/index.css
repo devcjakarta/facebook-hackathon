@@ -86,3 +86,6 @@ ul.ui.list li::before,
 p,
 ul {
   color: #fff; }
+
+.message > .content > p {
+  color: #000; }
