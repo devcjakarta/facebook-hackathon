@@ -16,7 +16,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Media Partner',
-  tabletGrid: 4,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'Code Politan',
@@ -24,7 +24,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Gold Sponsor',
-  tabletGrid: 4,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'mainAPI',
@@ -32,7 +32,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Silver Sponsor',
-  tabletGrid: 4,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'Awan Io',
@@ -63,6 +63,9 @@ const sponsorLists = [{
   lists: [{
     name: 'FemaleGeek',
     imageSrc: require('../assets/images/logo-femalegeek.png')
+  }, {
+    name: 'Kejora',
+    imageSrc: require('../assets/images/logo-kejora.jpg')
   }, {
     name: 'JakartaJS',
     imageSrc: require('../assets/images/logo-jakartajs.jpeg')

@@ -16,7 +16,7 @@ function FAQList ({ list }) {
   return (
     <div>
       <Header as="h3">{question}</Header>
-      <p style={style.withPadding}>{answer}</p>
+      <span style={style.withPadding}>{answer}</span>
     </div>
   )
 }
