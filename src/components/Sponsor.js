@@ -44,10 +44,13 @@ const sponsorLists = [{
   computerGrid: 4,
   lists: [{
     name: 'Blibli',
-    imageSrc: require('../assets/images/logo-blibli-80.jpg')
+    imageSrc: require('../assets/images/logo-blibli.png')
   }, {
     name: 'Bukalapak',
     imageSrc: require('../assets/images/logo-bukalapak.png')
+  }, {
+    name: 'Kejora',
+    imageSrc: require('../assets/images/logo-kejora.png')
   }, {
     name: 'Kudo',
     imageSrc: require('../assets/images/logo-kudo.png')
@@ -63,9 +66,6 @@ const sponsorLists = [{
   lists: [{
     name: 'FemaleGeek',
     imageSrc: require('../assets/images/logo-femalegeek.png')
-  }, {
-    name: 'Kejora',
-    imageSrc: require('../assets/images/logo-kejora.jpg')
   }, {
     name: 'JakartaJS',
     imageSrc: require('../assets/images/logo-jakartajs.jpeg')
