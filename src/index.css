@@ -83,6 +83,6 @@ img#imgMediaPartner {
 .ui.card > .content > .header,
 .ui.list,
 ul.ui.list li::before,
-p,
+span,
 ul {
   color: #fff; }
