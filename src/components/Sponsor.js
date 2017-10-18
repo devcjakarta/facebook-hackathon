@@ -23,15 +23,20 @@ const sponsorLists = [{
     imageSrc: require('../assets/images/logo-codepolitan.png')
   }]
 }, {
+  text: 'Gold Sponsor',
+  tabletGrid: 5,
+  computerGrid: 2,
+  lists: [{
+    name: 'mainAPI',
+    imageSrc: require('../assets/images/logo-mainapi.png')
+  }]
+}, {
   text: 'Silver Sponsor',
   tabletGrid: 4,
   computerGrid: 2,
   lists: [{
     name: 'Awan Io',
     imageSrc: require('../assets/images/logo-awanio.png')
-  },{
-    name: 'mainAPI',
-    imageSrc: require('../assets/images/logo-mainapi.png')
   }]
 }, {
   text: 'Supported By',
