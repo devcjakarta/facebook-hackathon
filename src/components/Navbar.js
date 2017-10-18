@@ -14,12 +14,12 @@ class Navbar extends Component {
                   <Link to="/" style={styles.h1}>{this.props.title}</Link>
               </Header.Content>
               <div className="menu-topright">
-                {/* <a href="http://jakarta-challenge.devcid.com/faq">FAQ</a> */}
-                <Link to="/faq">FAQ</Link>
+                <a href="http://jakarta-hackday.devcid.com/faq">FAQ</a>
+                {/* <Link to="/faq">FAQ</Link> */}
               </div>
               <div className="menu-topright">
-                <Link to="/about">About</Link>
-                {/* <a href="http://jakarta-hackday.devcid.com/about">About</a> */}
+                {/* <Link to="/about">About</Link> */}
+                <a href="http://jakarta-hackday.devcid.com/about">About</a>
               </div>
             </Container>
           </Header>
