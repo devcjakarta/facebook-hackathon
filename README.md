@@ -25,6 +25,6 @@ With `npm run build` command, it can generated production version which has more
 ## Built with  
 * **create-react-app** to create react-based web app with no build configuration.
 * **semantic-ui-react** to integrate Semantic UI with React.
-* **react-snapshot** to support server-side rendering.
+* **react-snapshot** to support pre-render.
 * **react-social-login** to allow developers to use HOC (High Order Component) which provides social login through multiple providers.
 * **node-sass-chokidar** to enable css preprocessor in create-react-app project with faster performance than `node-sass`.

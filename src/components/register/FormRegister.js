@@ -106,9 +106,6 @@ class FormRegister extends PureComponent {
         <Card fluid>
           <Card.Content>
             <Form loading={loading}>
-              {
-                displayMessage(response)
-              }
               <Form.Field required error={!!errors.name}>
                 <label htmlFor="name">Nama Lengkap</label>
                 <Input type="text"
@@ -161,12 +158,12 @@ class FormRegister extends PureComponent {
               </Form.Field>
 
               <Form.Field required error={!!errors.url}>
-                <label htmlFor="url">URL</label>
+                <label htmlFor="url">Link Video/Website</label>
                 <Input type="text"
                   name="url"
                   onChange={this.handleInputChange}
                   value={data.url}
-                  placeholder="Masukan URL" />
+                  placeholder="Masukan Link" />
                 { errors.url && <InlineError text={errors.url} />}
               </Form.Field>
 
@@ -201,7 +198,9 @@ class FormRegister extends PureComponent {
                   onChange={this.handleInputChange}
                 />
               </Form.Group>
-
+              {
+                displayMessage(response)
+              }
               <Form.Field>
                 <Button positive onClick={this.onSubmit}>Register</Button>
                 {
