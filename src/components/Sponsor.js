@@ -5,7 +5,7 @@ import SponsorList from './SponsorList'
 
 const sponsorLists = [{
   text: 'Organized By',
-  tabletGrid: 5,
+  tabletGrid: 4,
   computerGrid: 2,
   lists: [{
     name: 'DevC Jakarta',
@@ -16,7 +16,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Media Partner',
-  tabletGrid: 5,
+  tabletGrid: 4,
   computerGrid: 2,
   lists: [{
     name: 'Code Politan',
@@ -24,7 +24,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Silver Sponsor',
-  tabletGrid: 5,
+  tabletGrid: 4,
   computerGrid: 2,
   lists: [{
     name: 'Awan Io',
@@ -48,7 +48,7 @@ const sponsorLists = [{
     imageSrc: require('../assets/images/logo-kudo.png')
   }, {
     name: 'Tokopedia',
-    imageSrc: require('../assets/images/logo-tokopedia.png')    
+    imageSrc: require('../assets/images/logo-tokopedia.png')
   }]
 }, {
   text: 'Community Partner',
