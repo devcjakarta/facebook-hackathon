@@ -7,6 +7,21 @@
     padding-left: 20px;
   }
 
+  .about-list-item {
+    margin-left: 0 !important;
+  }
+
+  ol.about-list-item {
+    padding-left: 20px;
+
+    li {
+      list-style-type: decimal !important;
+      &::before {
+        content: ''
+      }
+    }
+  }
+
   .add-space {
     line-height: 1.5 !important;
   }
