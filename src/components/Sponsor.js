@@ -64,6 +64,9 @@ const sponsorLists = [{
     name: 'FemaleGeek',
     imageSrc: require('../assets/images/logo-femalegeek.png')
   }, {
+    name: 'Kejora',
+    imageSrc: require('../assets/images/logo-kejora.jpg')
+  }, {
     name: 'JakartaJS',
     imageSrc: require('../assets/images/logo-jakartajs.jpeg')
   }, {
