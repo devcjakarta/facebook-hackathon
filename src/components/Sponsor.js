@@ -16,7 +16,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Media Partner',
-  tabletGrid: 4,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'Code Politan',
@@ -24,7 +24,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Gold Sponsor',
-  tabletGrid: 5,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'mainAPI',
@@ -32,7 +32,7 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Silver Sponsor',
-  tabletGrid: 4,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'Awan Io',
