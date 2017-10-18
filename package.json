@@ -12,7 +12,7 @@
     "react-snapshot": "^1.2.0",
     "react-social-login": "^3.2.1",
     "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.75.0",
+    "semantic-ui-react": "^0.75.1",
     "validator": "^9.0.0"
   },
   "scripts": {
