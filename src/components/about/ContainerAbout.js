@@ -71,7 +71,7 @@ const judgesAndimportantDateList = [{
 function ContainerAbout () {
   return (
     <Container fluid style={style.container}>
-      <Container text>
+      <Container>
         <Header as="h1">
           Developer Circles Community Challenge - Jakarta Hack Day
         </Header>

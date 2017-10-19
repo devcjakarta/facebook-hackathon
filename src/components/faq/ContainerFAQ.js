@@ -1,5 +1,7 @@
 import React from 'react'
-import {Container, Header, Accordion, Card} from 'semantic-ui-react'
+import {Container, Header, Accordion} from 'semantic-ui-react'
+
+import '../../styles/faq/faq-container.css'
 
 const FAQLists = [{
   title: 'Kapan pendaftaran Jakarta Hack Day dibuka?',
@@ -38,22 +40,13 @@ const FAQLists = [{
 
 function ContainerFAQ () {
   return (
-    <Container id="faq-container" text>
-      <Card fluid raised style={styles.transparentBackground}>
-        <Card.Content>
-          <Header as="h1">FAQ</Header>
-          <Accordion defaultActiveIndex={0} panels={FAQLists} />
-        </Card.Content>
-      </Card>
+    <Container id="faq-container" fluid>
+      <Container>
+        <Header as="h1">FAQ</Header>
+        <Accordion defaultActiveIndex={0} panels={FAQLists} />
+      </Container>
     </Container>
   )
-}
-
-const styles = {
-  transparentBackground: {
-    backgroundColor: 'rgb(13, 71, 161)',
-    opacity: .75
-  }
 }
 
 export default ContainerFAQ
