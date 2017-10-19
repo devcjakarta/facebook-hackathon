@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Header } from 'semantic-ui-react'
 
 import AboutList from './AboutList'
+import HowToParticipate from './HowToParticipate'
 
 const aboutLists = [{
   title: 'Facebook Developer Circles Jakarta',
@@ -44,6 +45,20 @@ const aboutLists = [{
   ]
 }]
 
+const importantDateList = [{
+  title: 'Important Dates',
+  contents: [{
+    subtitle: 'Deadline',
+    description: `29 October 2017, 23.59 WIB`
+  }, {
+    subtitle: 'Finalists Announcement',
+    description: `3 November 2017`
+  }, {
+    subtitle: 'Hackathon',
+    description: `11 November 2017`
+  }]
+}]
+
 function ContainerAbout () {
   return (
     <Container fluid style={style.container}>
@@ -53,6 +68,10 @@ function ContainerAbout () {
         </Header>
         {
           aboutLists.map((list, i) => <AboutList key={i} list={list} />)
+        }
+        <HowToParticipate />
+        {
+          importantDateList.map((list, i) => <AboutList key={i} list={list} />)
         }
       </Container>
     </Container>

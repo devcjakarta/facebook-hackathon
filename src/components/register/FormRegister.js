@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Card, Form, Input, Button } from 'semantic-ui-react'
+import { Grid, Card, Form, Input, Button, TextArea } from 'semantic-ui-react'
 
 import '../../styles/register/form-register.css'
 
@@ -106,9 +106,6 @@ class FormRegister extends PureComponent {
         <Card fluid>
           <Card.Content>
             <Form loading={loading}>
-              {
-                displayMessage(response)
-              }
               <Form.Field required error={!!errors.name}>
                 <label htmlFor="name">Nama Lengkap</label>
                 <Input type="text"
@@ -149,23 +146,24 @@ class FormRegister extends PureComponent {
                 { errors.title && <InlineError text={errors.title} />}
               </Form.Field>
 
-              <Form.Field required error={!!errors.title}>
+              <Form.Field required error={!!errors.description}>
                 <label htmlFor="description">Deskripsi Singkat</label>
-                <textarea
+                <TextArea
                   name="description"
+                  autoHeight
                   onChange={this.handleInputChange}
                   value={data.description}
-                  placeholder="Masukan judul hackathon" />
+                  placeholder="Tuliskan deskripsi singkat di sini" />
                 { errors.description && <InlineError text={errors.description} />}
               </Form.Field>
 
               <Form.Field required error={!!errors.url}>
-                <label htmlFor="url">URL</label>
+                <label htmlFor="url">Link Video/Website</label>
                 <Input type="text"
                   name="url"
                   onChange={this.handleInputChange}
                   value={data.url}
-                  placeholder="Masukan URL" />
+                  placeholder="Masukan Link" />
                 { errors.url && <InlineError text={errors.url} />}
               </Form.Field>
 
@@ -200,7 +198,9 @@ class FormRegister extends PureComponent {
                   onChange={this.handleInputChange}
                 />
               </Form.Group>
-
+              {
+                displayMessage(response)
+              }
               <Form.Field>
                 <Button positive onClick={this.onSubmit}>Register</Button>
                 {

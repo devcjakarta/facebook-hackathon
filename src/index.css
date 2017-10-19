@@ -21,6 +21,11 @@ body {
   font-family: Segoe UI,Helvetica,Roboto,sans-serif;
   user-select: none; }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    body {
+      background-image: url("assets/images/background.webp"); } } }
+
 .label-register div {
   color: #FFFFFF;
   padding-right: 20px; }
@@ -83,6 +88,9 @@ img#imgMediaPartner {
 .ui.card > .content > .header,
 .ui.list,
 ul.ui.list li::before,
-p,
+span,
 ul {
   color: #fff; }
+
+.message > .content > p {
+  color: #000; }
