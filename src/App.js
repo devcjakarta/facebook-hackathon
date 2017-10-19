@@ -8,8 +8,8 @@ import Sponsor from './components/Sponsor'
 import Footer from './components/Footer'
 
 import ContainerRegister from './components/register/ContainerRegister'
-//import ContainerAbout from './components/about/ContainerAbout'
-//import ContainerFAQ from './components/faq/ContainerFAQ'
+import ContainerAbout from './components/about/ContainerAbout'
+import ContainerFAQ from './components/faq/ContainerFAQ'
 
 function App () {
   return (
@@ -21,10 +21,8 @@ function App () {
         <div className="App-content">
           <Switch>
             <Route exact path="/" component={ContainerRegister} />
-{/*
             <Route exact path="/about" component={ContainerAbout} />
             <Route exact path="/faq" component={ContainerFAQ} />
-*/}
           </Switch>
         </div>
         <div className="App-sponsor">
