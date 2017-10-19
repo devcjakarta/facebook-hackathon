@@ -49,7 +49,7 @@ const importantDateList = [{
   title: 'Important Dates',
   contents: [{
     subtitle: 'Deadline',
-    description: `29 October 2017, 23.59 WIB`
+    description: `28 October 2017, 23.59 WIB`
   }, {
     subtitle: 'Finalists Announcement',
     description: `3 November 2017`
