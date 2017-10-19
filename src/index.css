@@ -1,3 +1,9 @@
+.ui.accordion {
+  color: #fff; }
+  .ui.accordion .title:not(.ui) {
+    color: #fff;
+    font-weight: bold; }
+
 input[type=number] {
   -moz-appearance: textfield; }
   input[type=number]:hover, input[type=number]:focus {

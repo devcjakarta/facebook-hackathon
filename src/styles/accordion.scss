@@ -1,0 +1,10 @@
+$white: #fff;
+
+.ui.accordion {
+  color: $white;
+
+  .title:not(.ui) {
+    color: $white;
+    font-weight: bold;
+  }
+}
