@@ -41,20 +41,29 @@ const aboutLists = [{
   contents: [
     ['Quality of idea', 'Creativity and originality of the product idea submitted.' ],
     ['Implementation of Idea', 'How well the implementation of product from the submitted idea.'],
-    ['Value', 'How big is the impact of the products submitted.']
+    ['Value', 'How big is the impact of the products submitted.'],
+    ['Special Point (optional)', 'Participant who use any API from MainAPI will get additional point.']
   ]
 }]
 
-const importantDateList = [{
+const judgesAndimportantDateList = [{
+  title: 'Judges',
+  contents: [
+    'Panji Gautama - CTO, Kudo',
+    'Ilham Fatoni - Group Product Manager, Bukalapak.com',
+    'Rico Harisin - Engineering Manager, Tokopedia',
+    'Andy Zain, Managing Director, Kejora'
+  ]
+}, {
   title: 'Important Dates',
   contents: [{
-    subtitle: 'Deadline',
+    subtitle: 'Registration Submission Deadline',
     description: `28 October 2017, 23.59 WIB`
   }, {
-    subtitle: 'Finalists Announcement',
+    subtitle: 'Finalists Announcement (Outside Jabodetabek)',
     description: `3 November 2017`
   }, {
-    subtitle: 'Hackathon',
+    subtitle: 'Finalists Announcement (Jabodetabek) and Hack Day',
     description: `11 November 2017`
   }]
 }]
@@ -71,7 +80,7 @@ function ContainerAbout () {
         }
         <HowToParticipate />
         {
-          importantDateList.map((list, i) => <AboutList key={i} list={list} />)
+          judgesAndimportantDateList.map((list, i) => <AboutList key={i} list={list} />)
         }
       </Container>
     </Container>
