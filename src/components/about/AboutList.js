@@ -18,7 +18,7 @@ function generateListContents (contents) {
     default:
       return contents.map((content, i) => ([
         <Header as="h4" key={`h${i}`}>{content.subtitle}</Header>,
-        <p key={`p${i}`}>{content.description}</p>
+        <span key={`span${i}`}>{content.description}</span>
       ])
     )
   }

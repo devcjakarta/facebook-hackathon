@@ -5,7 +5,7 @@ import SponsorList from './SponsorList'
 
 const sponsorLists = [{
   text: 'Organized By',
-  tabletGrid: 5,
+  tabletGrid: 4,
   computerGrid: 2,
   lists: [{
     name: 'DevC Jakarta',
@@ -16,22 +16,27 @@ const sponsorLists = [{
   }]
 }, {
   text: 'Media Partner',
-  tabletGrid: 5,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'Code Politan',
     imageSrc: require('../assets/images/logo-codepolitan.png')
   }]
 }, {
+  text: 'Gold Sponsor',
+  tabletGrid: 3,
+  computerGrid: 2,
+  lists: [{
+    name: 'mainAPI',
+    imageSrc: require('../assets/images/logo-mainapi.png')
+  }]
+}, {
   text: 'Silver Sponsor',
-  tabletGrid: 5,
+  tabletGrid: 3,
   computerGrid: 2,
   lists: [{
     name: 'Awan Io',
     imageSrc: require('../assets/images/logo-awanio.png')
-  },{
-    name: 'mainAPI',
-    imageSrc: require('../assets/images/logo-mainapi.png')
   }]
 }, {
   text: 'Supported By',
@@ -39,16 +44,19 @@ const sponsorLists = [{
   computerGrid: 4,
   lists: [{
     name: 'Blibli',
-    imageSrc: require('../assets/images/logo-blibli-80.jpg')
+    imageSrc: require('../assets/images/logo-blibli.png')
   }, {
     name: 'Bukalapak',
     imageSrc: require('../assets/images/logo-bukalapak.png')
+  }, {
+    name: 'Kejora',
+    imageSrc: require('../assets/images/logo-kejora.png')
   }, {
     name: 'Kudo',
     imageSrc: require('../assets/images/logo-kudo.png')
   }, {
     name: 'Tokopedia',
-    imageSrc: require('../assets/images/logo-tokopedia.png')    
+    imageSrc: require('../assets/images/logo-tokopedia.png')
   }]
 }, {
   text: 'Community Partner',
