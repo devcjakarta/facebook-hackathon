@@ -19,7 +19,7 @@ class FormRegister extends PureComponent {
     description: '',
     url: '',
     file: '',
-    tech: 'Facebook Stack'
+    origin: 'Jabodetabek'
   }
   state = {
     data: {
@@ -179,22 +179,22 @@ class FormRegister extends PureComponent {
               </Form.Field>
 
               <Form.Group grouped>
-                <label htmlFor="tech">Teknologi</label>
+                <label htmlFor="origin">Domisili</label>
                 <Form.Radio
-                  label='Facebook Stack'
-                  name='tech'
-                  value='Facebook Stack'
+                  label='Jabodetabek (Jakarta, Bogor, Depok, Tangerang, Bekasi)'
+                  name='origin'
+                  value='Jabodetabek'
                   control="input"
                   type="radio"
-                  checked={data.tech === 'Facebook Stack'}
+                  checked={data.origin === 'Jabodetabek'}
                   onChange={this.handleInputChange} />
                 <Form.Radio
-                  label='Umum'
-                  name='tech'
-                  value='Umum'
+                  label='Luar Jabodetabek'
+                  name='origin'
+                  value='Luar Jabodetabek'
                   control="input"
                   type="radio"
-                  checked={data.tech === 'Umum'}
+                  checked={data.origin === 'Luar Jabodetabek'}
                   onChange={this.handleInputChange}
                 />
               </Form.Group>
