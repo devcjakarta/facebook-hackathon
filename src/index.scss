@@ -1,3 +1,5 @@
+@import './styles/accordion.scss';
+
 input[type=number] {
   -moz-appearance: textfield;
 
@@ -131,3 +133,13 @@ ul {
 .message > .content > p {
   color: #000;
 }
+
+.ui.accordion .title {
+  padding-bottom: 5px !important; 
+}
+
+.ui.accordion .content {
+  padding-top: 0px !important;
+  padding-left: 30px !important; 
+}
+

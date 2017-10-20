@@ -25,10 +25,9 @@
   .add-space {
     line-height: 1.5 !important;
   }
-
+  &:last-child,
   p:last-child,
   li:last-child,
-  ul.ui.list li:last-child,
   .item[role=listitem]:last-child {
     padding-bottom: 32px;
   }
