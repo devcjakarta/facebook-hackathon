@@ -8,7 +8,7 @@ const FAQLists = [{
   content: 'Pendaftaran dibuka mulai 16 Oktober 2017.'
 }, {
   title: 'Kapan pendaftaran Jakarta Hack Day ditutup?',
-  content: 'Pendaftaran ditutup pada tanggal 28 Oktober 2017 pukul 23.59 WIB.'
+  content: 'Pendaftaran ditutup pada tanggal 7 November 2017 pukul 23.59 WIB.'
 }, {
   title: 'Ke mana dokumen presentasi dikirim?',
   content: 'Dokumen presentasi dikirim melalui alamat email jakarta@devcid.com.'
@@ -17,7 +17,7 @@ const FAQLists = [{
   content: 'Sesi penjurian hackathon dilakukan tanggal 11 November 2017.'
 }, {
   title: 'Kapan pengumuman pemenang hackathon?',
-  content: `Pengumuman pemenang hackathon dilakukan 2 tahap. Finalis dari luar Jabodetabek diumumkan 4 November 2017, sedangkan peserta dari Jabodetabek diumumkan tanggal 11 November 2017.`
+  content: `Kapan pengumuman pemenang hackathon?Pengumuman pemenang hackathon dilakukan 2 tahap. Finalis dari luar Jabodetabek diumumkan 4 November 2017, sedangkan peserta dari Jabodetabek diumumkan tanggal 11 November 2017.`
 }, {
   title: 'Apakah submission untuk registrasi hackathon sudah harus berupa produk jadi?',
   content: 'Tidak. Peserta dapat mengirimkan karya berupa prototype.'
