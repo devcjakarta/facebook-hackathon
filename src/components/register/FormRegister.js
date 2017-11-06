@@ -157,8 +157,8 @@ class FormRegister extends PureComponent {
                 { errors.description && <InlineError text={errors.description} />}
               </Form.Field>
 
-              <Form.Field required error={!!errors.url}>
-                <label htmlFor="url">Link Video/Website</label>
+              <Form.Field error={!!errors.url}>
+                <label htmlFor="url">Link Video / Website (opsional)</label>
                 <Input type="text"
                   name="url"
                   onChange={this.handleInputChange}

@@ -14,7 +14,7 @@ function ContainerRegister () {
           title="Developer Circles Community Challenge"
           subTitle="Jakarta Hack Day"
           subTitleOld="Bring the world, closer together."
-          lastSubmission="28 Oktober 2017"
+          lastSubmission="7 November 2017"
           periode="11 November 2017"
         />
         <FormRegister submit={submitRegisterData} />
