@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { Button } from 'semantic-ui-react'
 import SocialLogin from 'react-social-login'
 
-function ButtonSocial ({ children, onClick, triggerLogin, ...props}) {
-  let handleLogin = () => {
+class ButtonSocial extends PureComponent {
+  handleLogin = () => {
+    let { onClick, triggerLogin } = this.props
     onClick()
     triggerLogin()
   }
-  return (
-    <Button {...props} color="facebook" onClick={handleLogin}>
-      {children}
-    </Button>
-  )
+
+  render () {
+    let {children, triggerLogin, triggerLogout, ...rest } = this.props
+    return (
+      <Button {...rest} color="facebook" onClick={this.handleLogin}>
+        {children}
+      </Button>
+    )
+  }
 }
 
 export default SocialLogin(ButtonSocial)
