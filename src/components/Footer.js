@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Menu, Container, Grid } from 'semantic-ui-react'
 
-function Footer ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg, sponsorSilverImg, supporter1Img, supporter2Img, communityPartnerImg1, communityPartnerImg2, communityPartnerImg3, communityPartnerImg4, communityPartnerImg5 }) {
+function Footer () {
   return (
     <Menu style={styles.footer}>
       <Container>
@@ -14,11 +13,6 @@ function Footer ({ title, subTitle, organizerName, organizerImg, sponsorGoldImg,
   )
 }
 
-
-Footer.propTypes = {
-  organizerName: PropTypes.string,
-  title: PropTypes.string.isRequired
-}
 
 const styles = {
   footer: {
